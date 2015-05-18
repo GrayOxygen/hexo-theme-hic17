@@ -1,111 +1,27 @@
-# Landscape
+# Hexo Landscape 主题修改优化 #
+by C17   2015-05-18 Monday 16-56-15 
 
-A brand new default theme for [Hexo].
+---
+### 1. [Google jQuery库的优化](http://kuangqi.me/tricks/hexo-optimizations-for-mainland-china/) ###
+ 
+`themes/landscape/layout/_partial/after-footer.ejs` 17行
 
-- [Preview](http://hexo.io/hexo-theme-landscape/)
-
-## Installation
-
-### Install
-
-``` bash
-$ git clone https://github.com/hexojs/hexo-theme-landscape.git themes/landscape
+```html
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 ```
+替换为如下代码：
 
-**Landscape requires Hexo 2.4 and above.**
-
-### Enable
-
-Modify `theme` setting in `_config.yml` to `landscape`.
-
-### Update
-
-``` bash
-cd themes/landscape
-git pull
+```html
+<script src="http://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  document.write(unescape("%3Cscript src='/js/jquery-2.0.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
 ```
+这里不但将Google的jQuery替换成了百度的，随后还进行了一个判断，如果获取百度的jQuery失败，则使用本网站自己的jQuery。为了让这段代码有效，我们要去jQuery官方下载合适版本的jQuery并将其放到`themes/landscape/source/js/`目录下，我将其命名为`jquery-2.0.3.min.js`。还有一点需要特别注意，那就是 jQuery 这个文件在 hexo 生产博客时会被解析，因此一定要将 jQuery 文件开头处的 `//@ sourceMappingURL=jquery-2.0.3.min.map` 这一行代码删去，否则会导致博客无法生成。
 
-## Configuration
+### 2. [跨平台字体优化](http://kuangqi.me/tricks/hexo-optimizations-for-mainland-china/)
 
-``` yml
-# Header
-menu:
-  Home: /
-  Archives: /archives
-rss: /atom.xml
-
-# Content
-excerpt_link: Read More
-fancybox: true
-
-# Sidebar
-sidebar: right
-widgets:
-- category
-- tag
-- tagcloud
-- archives
-- recent_posts
-
-# Miscellaneous
-google_analytics:
-favicon: /favicon.png
-twitter:
-google_plus:
-```
-
-- **menu** - Navigation menu
-- **rss** - RSS link
-- **excerpt_link** - "Read More" link at the bottom of excerpted articles. `false` to hide the link.
-- **fancybox** - Enable [Fancybox]
-- **sidebar** - Sidebar style. You can choose `left`, `right`, `bottom` or `false`.
-- **widgets** - Widgets displaying in sidebar
-- **google_analytics** - Google Analytics ID
-- **favicon** - Favicon path
-- **twitter** - Twiiter ID
-- **google_plus** - Google+ ID
-
-## Features
-
-### Fancybox
-
-Landscape uses [Fancybox] to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.
-
-```
-![img caption](img url)
-
-{% fancybox img_url [img_thumbnail] [img_caption] %}
-```
-
-### Sidebar
-
-You can put your sidebar in left side, right side or bottom of your site by editing `sidebar` setting.
-
-Landscape provides 5 built-in widgets:
-
-- category
-- tag
-- tagcloud
-- archives
-- recent_posts
-
-All of them are enabled by default. You can edit them in `widget` setting.
-
-## Development
-
-### Requirements
-
-- [Grunt] 0.4+
-- Hexo 2.4+
-
-### Grunt tasks
-
-- **default** - Download [Fancybox] and [Font Awesome].
-- **fontawesome** - Only download [Font Awesome].
-- **fancybox** - Only download [Fancybox].
-- **clean** - Clean temporarily files and downloaded files.
-
-[Hexo]: http://zespia.tw/hexo/
-[Fancybox]: http://fancyapps.com/fancybox/
-[Font Awesome]: http://fontawesome.io/
-[Grunt]: http://gruntjs.com/
