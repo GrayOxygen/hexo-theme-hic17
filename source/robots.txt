@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /fancybox/
+Sitemap: http://c17.co/sitemap.xml
