@@ -10,8 +10,8 @@ toc: true
 &emsp;&emsp;这几天用 Hexo 搭了个静态博客。觉得默认的 Landscape 主题挺好看，但有些地方很奇怪。别人改好的 Landscape-plus 和 Landscape-f 改动太大，用着不爽，就决定自己从头造个轮子修改一下。
 
 
-基于 [Landscape](https://github.com/hexojs/hexo-theme-landscape)，修改添加了部分功能。部分参考了 [Landscape-F](https://github.com/howiefh/hexo-theme-landscape-f) 和  [Landscape-plus](https://github.com/xiangming/landscape-plus)。
-文章参考来源以链接形式放在各节小标题上。有基于原文完善或修改的地方不再另行注明。
+&emsp;&emsp;基于 [Landscape](https://github.com/hexojs/hexo-theme-landscape)，修改添加了部分功能。部分参考了 [Landscape-F](https://github.com/howiefh/hexo-theme-landscape-f) 和  [Landscape-plus](https://github.com/xiangming/landscape-plus)。
+&emsp;&emsp;文章参考来源以链接形式放在各节小标题上。有基于原文完善或修改的地方不再另行注明。
 
 ## 1. [Google jQuery 库的优化](http://kuangqi.me/tricks/hexo-optimizations-for-mainland-china/) ##
  
