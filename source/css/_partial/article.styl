@@ -10,23 +10,34 @@
 
 .article-date
   @extend $block-caption
+  margin: 15px 15px 0px 20px
   float: left
+  a&:hover
+    color: color-link
+  &:before
+    font-family: font-icon
+    color: #ccc
+    content: "\f073"
 
 .article-category
+  margin: 15px 15px 0px 8px
   float: left
   line-height: 1em
   color: #ccc
   text-shadow: 0 1px #fff
-  margin-left: 8px
   &:before
-    content: "\2022"
+    font-family: font-icon
+    content: "\f0c6"
 
 .article-category-link
   @extend $block-caption
   margin: 0 12px 1em
+  a&:hover
+    color: color-link
 
 .article-header
   padding: article-padding article-padding 0
+  border-left: 5px solid color-theme
 
 .article-title
   text-decoration: none
@@ -34,6 +45,7 @@
   font-weight: bold
   color: color-default
   line-height: line-height-title
+  margin-left: -8px
   transition: color 0.2s
   a&:hover
     color: color-link
@@ -45,7 +57,7 @@
   padding: 0 article-padding
   p, table
     line-height: line-height
-    margin: line-height 0
+    margin: 1em 0
   h1, h2, h3, h4, h5, h6
     font-weight: bold
   h1, h2, h3, h4, h5, h6
@@ -78,10 +90,10 @@
     border-bottom: 1px solid color-border
     padding: 10px 0
   blockquote
+    border-left: 4px solid #ddd;
     font-family: font-serif
     font-size: 1.4em
     margin: line-height 20px
-    text-align: center
     footer
       font-size: font-size
       margin: line-height 0
@@ -127,7 +139,8 @@
   padding: 6px 15px
   border-radius: 15px
   background: color-background
-  color: color-grey
+  color: #555 //color-grey
+  font-weight: bold
   text-shadow: 0 1px #fff
   text-decoration: none
   &:hover
@@ -147,7 +160,9 @@
     color: color-grey
     text-decoration: none
     &:hover
-      color: color-default
+      color: color-link
+  span
+    color: color-grey
 
 .article-tag-list-item
   float: left
@@ -155,7 +170,10 @@
 
 .article-tag-list-link
   &:before
-    content: "#"
+    font-family: font-icon
+    content: "\f02b"
+    margin-right: 4px
+    color: #ccc
 
 .article-comment-link
   float: right
@@ -379,3 +397,25 @@ $article-gallery-ctrl
   &:before
     content: "\f054"
     right: 15px*/
+/*toc*/
+.toc-article
+  background #eee
+  border 1px solid #bbb
+  border-radius 10px
+  margin 1.5em 0 0.3em 1.5em
+  padding 1.2em 1em 0 1em
+  max-width 28%
+.toc-title
+  font-size 120%
+#toc
+  line-height 1em
+  font-size 0.9em
+  float right
+  .toc
+    padding 0
+    margin 1em
+    line-height 1.8em
+    li
+      list-style-type none
+  .toc-child 
+    margin-left 1em

@@ -1,3 +1,5 @@
 User-agent: *
 Disallow: /fancybox/
+Disallow: /archives/
+Disallow: /tags/
 Sitemap: http://c17.co/sitemap.xml

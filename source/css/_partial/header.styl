@@ -47,8 +47,8 @@ $logo-text
   text-decoration: none
   color: #fff
   font-weight: 300
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
-
+  text-shadow: 2px 2px 3px rgb(0, 0, 0), 2px 2px 3px rgb(0, 0, 0)
+  
 #logo
   @extend $logo-text
   font-size: logo-size
@@ -60,6 +60,7 @@ $logo-text
   font-size: subtitle-size
   line-height: subtitle-size
   letter-spacing: 1px
+  text-shadow: 2px 2px 3px rgb(0, 0, 0), 2px 2px 3px rgb(0, 0, 0, 0.5)
 
 #subtitle-wrap
   margin-top: subtitle-size
@@ -73,7 +74,7 @@ $nav-link
   color: #fff
   opacity: 0.6
   text-decoration: none
-  text-shadow: 0 1px rgba(0, 0, 0, 0.2)
+  text-shadow: 2px 2px 3px rgb(0, 0, 0)
   transition: opacity 0.2s
   display: block
   padding: 20px 15px
@@ -87,7 +88,7 @@ $nav-link
   font-size: font-size
   width: font-size
   height: font-size
-  padding: 20px 15px
+  padding: 20px 5px
   position: relative
   cursor: pointer
 
@@ -107,7 +108,7 @@ $nav-link
 
 #sub-nav
   float: right
-  margin-right: -15px
+  margin-right: -5px
 
 #nav-rss-link
   &:before

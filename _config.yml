@@ -1,8 +1,9 @@
 # Header
 menu:
   主页: /
-  文章目录: /archives
-  网站地图: /sitemap.xml
+  天生码农: /categories/coding/
+  小清新: /categories/life/
+  总目录: /archives
   关于我: /about
 rss: /atom.xml
 
@@ -13,11 +14,14 @@ fancybox: true
 # Sidebar
 sidebar: right
 widgets:
+- about_me
+- weibo
+- recent_posts
 - category
-- tag
 - tagcloud
 - archive
-- recent_posts
+- tag
+- links
 
 # Miscellaneous
 favicon: /favicon.png
@@ -25,3 +29,23 @@ twitter: HKEY_C17
 google_plus: '118157846818083514683'
 fb_admins: sykiechencixi
 fb_app_id:
+
+
+# Scroll to top
+go_top: true
+# blogroll
+links:
+- name: 404 page
+  link: http://c17.co/404.html
+- name: Is Fang Binxing Dead?
+  link: http://isfangbinxingdead.com
+
+
+# about me
+about_me:
+  avatar: /avatar.png
+  texts:
+  - <a href="mailto:c17@c17.co">Sykie Chen</a>
+  - or HKEY_C17
+  - 码渣 / 前医学生 / ENTP
+  - 不谈中医我们还是好朋友
