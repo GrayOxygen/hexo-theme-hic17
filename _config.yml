@@ -15,16 +15,16 @@ fancybox: true
 sidebar: right
 widgets:
 - about_me
-- weibo
 - recent_posts
 - category
+- weibo
 - tagcloud
 - archive
 - tag
 - links
 
 # Miscellaneous
-favicon: /favicon.png
+favicon: /css/images/favicon.png
 twitter: HKEY_C17
 google_plus: '118157846818083514683'
 fb_admins: sykiechencixi
@@ -43,7 +43,7 @@ links:
 
 # about me
 about_me:
-  avatar: /avatar.png
+  avatar: /css/images/avatar.png
   texts:
   - <a href="mailto:c17@c17.co">Sykie Chen</a>
   - or HKEY_C17
