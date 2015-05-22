@@ -35,11 +35,12 @@ fb_app_id:
 go_top: true
 # blogroll
 links:
+- name: 熊神 - xindervella
+  link: http://xindervella.com/
 - name: 404 page
   link: http://c17.co/404.html
 - name: Is Fang Binxing Dead?
   link: http://isfangbinxingdead.com
-
 
 # about me
 about_me:
