@@ -23,6 +23,10 @@ widgets:
 - tag
 - links
 
+# Scrollbar
+# scrollbar behaves weird on mobile devices
+scrollbar: false
+
 # Miscellaneous
 favicon: /css/images/favicon.png
 twitter: HKEY_C17

@@ -2,7 +2,6 @@
 @import "_variables"
 @import "_util/mixin"
 @import "_util/grid"
-@import "_partial/scrollbar"
 global-reset()
 
 input, button
@@ -85,6 +84,8 @@ if sidebar is left
 @import "_partial/mobile"
 @import "_partial/bottom-btn"
 @import "_partial/about-me"
+if scrollbar
+  @import "_partial/scrollbar"
 
 if sidebar
   @import "_partial/sidebar"
