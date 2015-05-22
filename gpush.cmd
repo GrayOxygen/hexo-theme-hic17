@@ -1,4 +1,8 @@
+@echo off
 git add . --all
-git commit -m "%date%%time%"
+set /p cmt="Please enter commit text,leave empty to add time: "
+if defined str (
+git commit -m %cmt%
+) else git commit -m "%date%%time%"
 git push -u origin master
 pause
