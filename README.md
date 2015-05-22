@@ -57,7 +57,7 @@ font-sans = Tahoma, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft 
 ```
 改为
 ```html
-<link href="http://fonts.lug.ustc.edu.cn/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+<link href="http://fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
 ```
 
 ##4. 修改添加分享链接 ##
