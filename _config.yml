@@ -1,7 +1,7 @@
 # Header
 menu:
   主页: /
-  天生码农: /categories/coding/
+  小技术: /categories/coding/
   小清新: /categories/life/
   总目录: /archives
   关于我: /about
@@ -22,10 +22,6 @@ widgets:
 - archive
 - tag
 - links
-
-# Scrollbar
-# scrollbar behaves weird on mobile devices
-scrollbar: false
 
 # Miscellaneous
 favicon: /css/images/favicon.png
