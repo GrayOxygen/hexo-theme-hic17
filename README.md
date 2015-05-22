@@ -1,8 +1,7 @@
 title: Hexo Landscape 主题修改优化
-date: 2015-05-18 16:56:15
-updated: 2015-05-21 14:23:23
+date: 2015-05-23 23:18:15
 tags: [Hexo, Landscape, 主题, 博客, 前端]
-category: [天生码农, HTML]
+category: [小技术, HTML]
 list_number: false
 toc: true
 
@@ -371,7 +370,7 @@ add source/js/gotop.js
 ##18. [文章目录](http://starsky.gitcafe.io/2015/05/06/%E4%B8%BAHexo%E5%8D%9A%E6%96%87%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95/)##
 
 `layout\_partial\article.ejs`
-```language:html
+```
 <% } else { %>
 	<!-- Table of Contents -->
 	<% if (!index && post.toc){ %>
@@ -384,7 +383,7 @@ add source/js/gotop.js
 ```
 
 `source\css\_partial\article.styl`
-```language:css
+```
 /*toc*/
 .toc-article
   background #eee
@@ -411,9 +410,9 @@ add source/js/gotop.js
 ```
 在需要目录的文章 md 中加入参数`toc: true`
 
-## 19.将文章时间放在标题下 ##
+## 19. 将文章时间放在标题下 ##
 `article.ejs`
-```language:html
+```
       </header>
     <% } %>
   <div class="article-meta">
@@ -425,7 +424,7 @@ add source/js/gotop.js
 ```
 
 `article.styl`
-```language:css
+```
 .article-date
   @extend $block-caption
   margin: 20px 15px 0px 15px
@@ -447,7 +446,7 @@ add source/js/gotop.js
     font-family: font-icon
     content: "\f0c6"
 ```
-```language:css
+```
 .article-date
   @extend $block-caption
   margin: 15px 15px 0px 20px
@@ -471,11 +470,13 @@ add source/js/gotop.js
 ```
 
 
+## 后记 ##
+&emsp;&emsp;终于造好了轮子= = 整个人都萌了许多
+&emsp;&emsp;bug 在所难免，本项目 GitHub 主页：
+https://github.com/HKEY-C17/hexo-theme-hic17
+&emsp;&emsp;（我知道，没人会去看的=。=）
+&emsp;&emsp;但我还是觉得我萌了好多！![](http://c17.co/css/images/avatar.png)
 
-坑：
 
-返回顶部
-侧边栏目录
-
-友链
-
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;by Sykie Chen
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2015.5.23
