@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /fancybox/
 Disallow: /archives/
 Disallow: /tags/
-Sitemap: http://c17.co/sitemap.xml
+Sitemap: http://www.c17.co/sitemap.xml
