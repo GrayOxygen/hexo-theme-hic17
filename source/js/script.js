@@ -55,7 +55,7 @@
         '<div id="' + id + '" class="article-share-box">',
           '<input class="article-share-input" value="' + url + '">',
           '<div class="article-share-links">',
-		    '<a href="http://service.weibo.com/share/share.php?appkey=1483801509&ralateUid=3904642734&searchPic=true&url=' + encodedUrl + '" class="article-share-sina" target="_blank" title="微博"></a>',
+		    '<a href="http://service.weibo.com/share/share.php?appkey=1714312189&ralateUid=3904642734&searchPic=true&url=' + encodedUrl + '" class="article-share-sina" target="_blank" title="微博"></a>',
 			'<a href="http://share.renren.com/share/buttonshare.do?link=' + encodedUrl + '" class="article-share-renren" target="_blank" title="人人"></a>',
 			'<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-qq" target="_blank" title="QQ空间"></a>',
 			'<a href="http://qr.liantu.com/api.php?text=' + encodedUrl + '" class="article-share-wechat" target="_blank" title="微信"></a>',
@@ -92,6 +92,7 @@
   $('.article-entry').each(function(i){
     $(this).find('img').each(function(){
       if ($(this).parent().hasClass('fancybox')) return;
+	  if ($(this).hasClass('nofancybox')) return;
 
       var alt = this.alt;
 

@@ -23,7 +23,7 @@ widgets:
 - links
 
 # Miscellaneous
-favicon: /css/images/favicon.png
+favicon: /favicon.ico
 twitter: HKEY_C17
 google_plus: '118157846818083514683'
 fb_admins: sykiechencixi
@@ -34,10 +34,12 @@ fb_app_id:
 go_top: true
 # blogroll
 links:
+- name: Yay Ka-Boom-Boom
+  link: http://www.lynx.im/
 - name: 熊神 - xindervella
   link: http://xindervella.com/
-- name: 404 page
-  link: http://www.c17.co/404.html
+- name: 南京风行数码 - 至少不会坑你
+  link: http://www.zol.com/shop_183165/
 - name: Is Fang Binxing Dead?
   link: http://isfangbinxingdead.com
 
@@ -45,7 +47,12 @@ links:
 about_me:
   avatar: /css/images/avatar.png
   texts:
-  - <a href="mailto:c17@c17.co">Sykie Chen</a>
+  - <a href="http://www.devchen.com/about/">Sykie Chen</a>
   - or HKEY_C17
   - 码渣 / 前医学生 / ENTP
-  - 不谈中医我们还是好朋友
+  - 死胖子 / 死矮子 / 腿控
+
+
+# duoshuo author key
+duoshuo_info:
+  data_author_key: 233

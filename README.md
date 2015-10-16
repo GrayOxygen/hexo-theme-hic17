@@ -75,16 +75,16 @@ font-sans = Tahoma, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft 
 在`layout\_partial\after-footer.ejs`末尾添加第二部分代码
 ```
 <!-- Baidu Share Start --->
-<script>window._bd_share_config={"common":{"bdSnsKey":{"tsina":"1483801509"},"bdWbuid":3904642734,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdPic":"http://c17.co/SharePic.png","bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{"tsina":"1714312189"},"bdWbuid":3904642734,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdPic":"http://www.devchen.com/SharePic.png","bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 <!--- Baidu Share End --->
 ```
-其中`1483801509`为我申请的微博开放平台的 App Key，申请后分享可以显示尾巴。`3904642734`是我的微博 ID，作用是在文本框里自动艾特我的微博。
+其中`1714312189`为我申请的微博开放平台的 App Key，申请后分享可以显示尾巴。`3904642734`是我的微博 ID，作用是在文本框里自动艾特我的微博。
 注意保存时将编码改为 UTF-8，否则会乱码。
 
 ### 4.2 [原生分享的修改](http://blanboom.org/hack-hexo-theme-landscape.html) ###
 在 `source\js\script.js` 中，57行 `'<div class="article-share-links">'`,，下面的四个链接就是 Facebook 等社交网站的分享链接。将其替换或添加如下代码，即可实现分享到国内社交网站：
 ```html
-'<a href="http://service.weibo.com/share/share.php?appkey=1483801509&pic=http%3A%2F%2Fc17.co%2FSharePic.png&ralateUid=3904642734&searchPic=true&url=' + encodedUrl + '" class="article-share-sina" target="_blank" title="微博"></a>',
+'<a href="http://service.weibo.com/share/share.php?appkey=1714312189&pic=http%3A%2F%2Fwww.devchen.com%2FSharePic.png&ralateUid=3904642734&searchPic=true&url=' + encodedUrl + '" class="article-share-sina" target="_blank" title="微博"></a>',
 '<a href="http://share.renren.com/share/buttonshare.do?link=' + encodedUrl + '" class="article-share-renren" target="_blank" title="人人"></a>',
 '<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-qq" target="_blank" title="QQ空间"></a>',
 '<a href="http://qr.liantu.com/api.php?text=' + encodedUrl + '" class="article-share-wechat" target="_blank" title="微信"></a>',
@@ -208,7 +208,7 @@ border-radius: 8px
           <td style="text-align:left">
             Copyright &copy; 2014-<%= date(new Date(), 'YYYY') %> <%= config.author || config.title %> &nbsp; &nbsp;
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><br>
-	        Theme <a href="https://github.com/HKEY-C17/hexo-theme-hic17" target="_blank">HiC17</a> by Sykie Chen &nbsp; &nbsp;
+	        Theme <a href="https://github.com/sykiechen/hexo-theme-hic17" target="_blank">HiC17</a> by Sykie Chen &nbsp; &nbsp;
 	        Hosted on <a href="http://gitcafe.com/" target="_blank">Git Cafe</a>
 		  </td>
 		  <td style="text-align:right">
@@ -218,13 +218,13 @@ border-radius: 8px
 			<a href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>&nbsp;
 			<a href="https://www.facebook.com/sykiechencixi" title="Facebook" target="_blank">&#62000;</a>&nbsp;
 			<a href="https://twitter.com/HKEY_C17" title="twitter" target="_blank">&#61593;</a>&nbsp;
-			<a href="http://cn.linkedin.com/in/sykiechen" title="LinkedIn" target="_blank">&#61665;</a>&nbsp;
-			<a href="https://github.com/HKEY-C17" title="GitHub" target="_blank">&#61595;</a>&nbsp;
+			<a href="http://www.linkedin.com/in/sykiechen" title="LinkedIn" target="_blank">&#61665;</a>&nbsp;
+			<a href="https://github.com/sykiechen" title="GitHub" target="_blank">&#61595;</a>&nbsp;
 			<a href="https://plus.google.com/118157846818083514683" title="Google+" target="_blank">&#61653;</a>
 			</div><br>
 		    <a href="/sitemap.xml">网站地图</a>&nbsp; &nbsp;
 			<a href="/atom.xml">订阅本站</a>&nbsp; &nbsp;
-			<a href="mailto:c17@c17.co" target="_blank">联系博主</a>&nbsp; &nbsp;
+			<a href="mailto:i@devchen.com" target="_blank">联系博主</a>&nbsp; &nbsp;
 			ICP 备案你妹
 		  </td>
         </tr>
@@ -349,8 +349,8 @@ result += '</ul>';
 <a class="nav-icon" href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>
 <a class="nav-icon" href="https://www.facebook.com/sykiechencixi" title="Facebook" target="_blank">&#62000;</a>
 <a class="nav-icon" href="https://twitter.com/HKEY_C17" title="twitter" target="_blank">&#61593;</a>
-<a class="nav-icon" href="http://cn.linkedin.com/in/sykiechen" title="LinkedIn" target="_blank">&#61665;</a>
-<a class="nav-icon" href="https://github.com/HKEY-C17" title="GitHub" target="_blank">&#61595;</a>
+<a class="nav-icon" href="http://www.linkedin.com/in/sykiechen" title="LinkedIn" target="_blank">&#61665;</a>
+<a class="nav-icon" href="https://github.com/sykiechen" title="GitHub" target="_blank">&#61595;</a>
 <a class="nav-icon" href="https://plus.google.com/118157846818083514683" title="Google+" target="_blank">&#61653;</a>
 ```
 
@@ -473,9 +473,9 @@ add source/js/gotop.js
 ## 后记 ##
 &emsp;&emsp;终于造好了轮子= = 整个人都萌了许多
 &emsp;&emsp;bug 在所难免，本项目 GitHub 主页：
-https://github.com/HKEY-C17/hexo-theme-hic17
+https://github.com/sykiechen/hexo-theme-hic17
 &emsp;&emsp;（我知道，没人会去看的=。=）
-&emsp;&emsp;但我还是觉得我萌了好多！![](http://c17.co/css/images/avatar.png)
+&emsp;&emsp;但我还是觉得我萌了好多！![](http://www.devchen.com/css/images/avatar.png)
 
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;by Sykie Chen

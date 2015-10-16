@@ -2,4 +2,5 @@ User-agent: *
 Disallow: /fancybox/
 Disallow: /archives/
 Disallow: /tags/
-Sitemap: http://www.c17.co/sitemap.xml
+Disallow: /test/
+Sitemap: http://www.devchen.com/sitemap.xml
