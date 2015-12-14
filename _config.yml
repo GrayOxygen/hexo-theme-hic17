@@ -22,7 +22,18 @@ widgets:
 - archive
 - links
 
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
 # Miscellaneous
+<<<<<<< HEAD
 favicon: /favicon.ico
 twitter: HKEY_C17
 google_plus: '118157846818083514683'
@@ -58,3 +69,11 @@ about_me:
 # duoshuo author key
 duoshuo_info:
   data_author_key: 233
+=======
+google_analytics:
+favicon: /favicon.png
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:
+>>>>>>> refs/remotes/hexojs/master
