@@ -45,11 +45,13 @@ fb_app_id:
 go_top: true
 # blogroll
 links:
-- name: Yay Ka-Boom-Boom
+- name: Yay Ka-Boom-Boom - 郭都豪
   link: http://www.lynx.im/
+- name: 王雨峰同学吃了一块二向箔
+  link: http://www.wangyufeng.org/
 - name: 熊神 - xindervella
   link: http://xindervella.com/
-- name: 南京风行数码 - 至少不会坑你
+- name: 南京风行数码 - 绝壁不会坑你
   link: http://www.zol.com/shop_183165/
 - name: Is Fang Binxing Dead?
   link: http://isfangbinxingdead.com
@@ -60,8 +62,8 @@ about_me:
   texts:
   - <a href="http://www.devchen.com/about/">Sykie Chen</a>
   - or HKEY_C17
-  - 码渣 / 前医学生 / ENTP
-  - 死胖子 / 死矮子 / 腿控
+  - 码渣 / 前医学生
+  - 微信公众号：十七的空指针
 
 
 # duoshuo author key
