@@ -1,11 +1,7 @@
-title: Hexo Landscape 主题修改优化
-date: 2015-05-23 23:18:15
-tags: [Hexo, Landscape, 主题, 博客, 前端]
-category: [小技术, HTML]
-list_number: false
-toc: true
+#Hexo Landscape 主题修改优化#
+2015-05-23 23:18:15
 
----
+
 &emsp;&emsp;这几天用 Hexo 搭了个静态博客。觉得默认的 Landscape 主题挺好看，但有些地方很奇怪。别人改好的 Landscape-plus 和 Landscape-f 改动太大，用着不爽，就决定自己从头造个轮子修改一下。
 
 
@@ -16,14 +12,13 @@ toc: true
  
 `layout\_partial\after-footer.ejs` 17行
 
-```html
+```xml
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 ```
-<!-- more -->
 
 替换为如下代码：
 
-```html
+```xml
 <script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
 <script type="text/javascript">
 //<![CDATA[
@@ -39,11 +34,11 @@ if (typeof jQuery == 'undefined') {
 ## 2. [跨平台字体优化](http://kuangqi.me/tricks/hexo-optimizations-for-mainland-china/) ##
 
 为了能在各个平台上都显示令人满意的字体，我们要修改 CSS 文件中的字体设置，列出多个备选的字体，操作系统会依次尝试，使用系统中已安装的字体。我们要修改的是`source\css\_variables.styl`这一文件，将其中第22行
-```
+```javascript
 font-sans = "Helvetica Neue", Helvetica, Arial, sans-serif
 ```
 改成如下内容：
-```
+```javascript
 font-sans = Tahoma, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei Light", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", sans-serif
 ```
 其中 Helvetica、Verdana 是英文字体，前者一般存在于苹果电脑和移动设备上，后者一般存在于 Windows 系统中。冬青黑体（Hiragino Sans GB）、思源黑体（Source Han Sans CN）、文泉驿米黑（WenQuanYi Micro Hei）是中文字体，冬青黑体从 OS X 10.6 开始集成在苹果系统中，文泉驿米黑在Linux的各大发行版中均较为常见，而思源黑体是近期 Google 和 Adobe 合作推出的一款开源字体，很多电脑上也安装了这一字体。这样一来，在绝大部分操作系统中就可以显示美观的字体了。
@@ -51,11 +46,11 @@ font-sans = Tahoma, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft 
 ##3. [代码块等宽字体优化](https://www.snip2code.com/Snippet/466525/replace-the-google-link%28css-js%29-to-baidu) ##
 
 `layout\_partial\head.ejs` 第31行
-```html
+```xml
 <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
 ```
 改为
-```html
+```xml
 <link href="http://fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
 ```
 
@@ -64,7 +59,7 @@ font-sans = Tahoma, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft 
 
 在百度分享获取代码后，代码可分为两部分。
 在`layout\_partial\article.ejs`中第26行插入第一段代码并添加判断条件，若当前页为文章展开页则显示百度分享框，若是缩略则采用原生分享链接，避免百度分享框获取的 URL 错误：
-```
+```xml
 <% if ((page.layout == 'post'|| page.layout == 'page')){ %>
   <div class="bdsharebuttonbox"><a href="<%- post.permalink %>">分享到：</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook">Facebook</a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter">Twitter</a><a href="#" class="bds_more" data-cmd="more">其他平台</a></div>
 <% } else { %>
@@ -73,7 +68,7 @@ font-sans = Tahoma, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft 
 ```
 
 在`layout\_partial\after-footer.ejs`末尾添加第二部分代码
-```
+```xml
 <!-- Baidu Share Start --->
 <script>window._bd_share_config={"common":{"bdSnsKey":{"tsina":"1714312189"},"bdWbuid":3904642734,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdPic":"http://www.devchen.com/SharePic.png","bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 <!--- Baidu Share End --->
@@ -83,7 +78,7 @@ font-sans = Tahoma, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft 
 
 ### 4.2 [原生分享的修改](http://blanboom.org/hack-hexo-theme-landscape.html) ###
 在 `source\js\script.js` 中，57行 `'<div class="article-share-links">'`,，下面的四个链接就是 Facebook 等社交网站的分享链接。将其替换或添加如下代码，即可实现分享到国内社交网站：
-```html
+```xml
 '<a href="http://service.weibo.com/share/share.php?appkey=1714312189&pic=http%3A%2F%2Fwww.devchen.com%2FSharePic.png&ralateUid=3904642734&searchPic=true&url=' + encodedUrl + '" class="article-share-sina" target="_blank" title="微博"></a>',
 '<a href="http://share.renren.com/share/buttonshare.do?link=' + encodedUrl + '" class="article-share-renren" target="_blank" title="人人"></a>',
 '<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-qq" target="_blank" title="QQ空间"></a>',
@@ -96,7 +91,7 @@ font-sans = Tahoma, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft 
 
 然后，在 `source\css\_partial\article.styl` 中，找到四段以 `.article-share-***` 开头的代码（273行起），添加如下内容：
 
-```
+```javascript
 .article-share-sina
   @extend $article-share-link
   &:before
@@ -130,7 +125,7 @@ font-sans = Tahoma, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft 
     text-shadow: 0 1px darken(color-wechat, 20%)
 ```
 最后，找到 `source\css\_variables.styl` 中 `Colors` 部分（16行），最后四行分别为社交网站图标的背景色，可根据这些网站的主题色修改。
-```
+```javascript
 color-sina = #ff8140
 color-qq = #ffcc33
 color-renren = #227dc5
@@ -139,12 +134,12 @@ color-wechat = #44b549
 
 ##5. [安装 RSS 和 sitemap 插件](http://starsky.gitcafe.io/2015/05/05/Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BC%98%E5%8C%96%EF%BC%88%E4%B8%80%EF%BC%89/)##
 
-```
+```bash
 $ npm install hexo-generator-feed --save
 $ npm install hexo-generator-sitemap --save
 ```
 修改 `hexo\_config.yml` 站点配置，添加：
-```
+```json
 # Extensions
 Plugins:
   hexo-generator-feed
@@ -171,7 +166,7 @@ RSS 也是一样。
 
 ##6. 卡片增加阴影 ##
 `source/css/_partial/header.styl`第5行添加：
-```
+```javascript
 -webkit-box-shadow: 2px 4px 5px rgba(3,3,3,0.2)
 box-shadow: 2px 4px 5px rgba(3,3,3,0.2)
 ```
@@ -186,12 +181,12 @@ box-shadow: 2px 4px 5px rgba(3,3,3,0.2)
 
 ##9. [代码块修改](http://blog.sunnyxx.com/2014/03/07/hexo_customize/) ##
 `source\css\_partial\highlight.styl` 17行改为
-```
+```javascript
 margin: auto
 ```
 使代码块不再左右撑开
 22行添加
-```
+```javascript
 border-radius: 8px
 ```
 圆角。
@@ -200,7 +195,7 @@ border-radius: 8px
 原生的好丑啊！
 `layout\_partial\footer.ejs`
 添加一个表格，实现分散对齐。添加了网站地图等链接。
-```
+```xml
 <div class="outer">
     <div id="footer-info" class="inner" style="text-align:center;">
 	  <table width="100%" border="0">
@@ -230,20 +225,21 @@ border-radius: 8px
         </tr>
       </table>
     </div>
-  </div>
+</div>
 ```
+
 此处使用了 Font Awesome 字体中的图标。官网介绍的使用方法是包含一个 css 文件进去。然而 Landscape 主题已经使用过该字体，所以该 css 文件的内容应已包含在 style.css 内。故将 html a 标签的 font 指定为该字体，内容处填写~~&#`UTF编码的十进制值`; 可用计算器将官网给出的十六进制 UTF 区位码转换为十进制。~~ &#x`UTF十六进制值`;。
 
 ##11. [多说评论框](http://howiefh.github.io/2014/04/20/hexo-optimize-and-my-theme-landscape-f/) ##
 
 在`layout\_partial\article.ejs`中将中部 dis 评论按钮代码替换为：
-```
+```javascript
 <% if (post.comments){ %>
   <a href="<%- post.permalink %>#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="<%- post.path%>">评论</a>
 <% } %>
 ```
 底部评论框替换为：
-```
+```javascript
 <% if (!index && post.comments){ %>
 <section id="comments">
 <!-- 多说评论框 start -->
@@ -253,7 +249,7 @@ border-radius: 8px
 <% } %>
 ```
 `layout\_partial\after-footer.ejs`中 dis 评论框 js 替换为从多说获得的代码：
-```
+```xml
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"hkeyc17"};
@@ -279,19 +275,19 @@ var duoshuoQuery = {short_name:"hkeyc17"};
 
 上述方法添加的微博秀没有标题文字，也不像landscape的其他widget那样具有圆角矩形、带内阴影的边框，所以获取微博代码时就要进行一些设置，为了将微博秀“嵌入”到 widget 中，我们要关掉各种边框和标题栏。更重要的是，我们要将微博秀的背景色设置成与主题一致。
 在ejs前后加入
-```
+```xml
   <div class="widget-wrap">
     <h3 class="widget-title">Weibo</h3>
     <div class="widget">
 ```
 和
-```
+```xml
   </div>
 </div>
 ```
 此时外框带有一个`padding`值，使得微博秀显示在其中小了一圈，我们希望将微博秀贴边显示。这个padding值正是由`widget`这个 class 的 CSS 设定的。
 所以在第三行的 div 中指定 padding 值覆盖 css 中的设定。
-```
+```xml
 <div class="widget" style="padding: 0px">
 ```
 
@@ -303,7 +299,7 @@ var duoshuoQuery = {short_name:"hkeyc17"};
 23行，日期格式，由`MMMM YYYY`改为`YYYY - MM`。
 
 将70行起的 if 区块代码改为：
-```
+```javascript
 result += '<ul class="' + className + '-list">';
 len = data.length < 10 ? data.length : 9;
 for (i = 0; i < len; i++){
@@ -334,7 +330,7 @@ result += '</ul>';
 修改搜索框涉及 Helper。
 `node_modules\hexo\lib\plugins\helper\search_form.js`
 12行起改为：
-```
+```javascript
   return '<form class="' + className + '">' +
     '<input type="input" id="ts-search-input" name="q" results="0" class="' + className + '-input"' + (text ? ' placeholder="' + text + '"' : '') + '>' +
     (button ? '<button type="submit" class="' + className + '-submit">' + (typeof button === 'string' ? button : text) + '</button>' : '') +
@@ -343,7 +339,7 @@ result += '</ul>';
 
 ##15. 头部加入社交入口 ##
 `layout\_partial\header.ejs` 22 行加入
-```
+```xml
 <a class="nav-icon" href="http://weibo.com/3904642734" title="微博" target="_blank">&#61834;</a>
 <a class="nav-icon" href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>
 <a class="nav-icon" href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>
@@ -370,7 +366,7 @@ add source/js/gotop.js
 ##18. [文章目录](http://starsky.gitcafe.io/2015/05/06/%E4%B8%BAHexo%E5%8D%9A%E6%96%87%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95/)##
 
 `layout\_partial\article.ejs`
-```
+```javascript
 <% } else { %>
 	<!-- Table of Contents -->
 	<% if (!index && post.toc){ %>
@@ -383,7 +379,7 @@ add source/js/gotop.js
 ```
 
 `source\css\_partial\article.styl`
-```
+```css
 /*toc*/
 .toc-article
   background #eee
@@ -412,7 +408,7 @@ add source/js/gotop.js
 
 ## 19. 将文章时间放在标题下 ##
 `article.ejs`
-```
+```xml
       </header>
     <% } %>
   <div class="article-meta">
@@ -424,7 +420,7 @@ add source/js/gotop.js
 ```
 
 `article.styl`
-```
+```css
 .article-date
   @extend $block-caption
   margin: 20px 15px 0px 15px
@@ -446,7 +442,7 @@ add source/js/gotop.js
     font-family: font-icon
     content: "\f0c6"
 ```
-```
+```css
 .article-date
   @extend $block-caption
   margin: 15px 15px 0px 20px
@@ -469,14 +465,44 @@ add source/js/gotop.js
     content: "\f0c6"
 ```
 
+## 20. [在某些图片上禁用 fancybox](http://twiceyuan.com/2014/08/12/disable-fancybox/) ##
+
+有些情况下希望某些图片不使用 fancybox 的弹出效果，如关于页面中的网站小图标，在 hexo 中可以这样实现：
+
+`/source/js/script.js`,找到：
+```javascript
+// Caption
+  $('.article-entry').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+
+      var alt = this.alt;
+
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+
+  if ($.fancybox){
+    $('.fancybox').fancybox();
+  }
+```
+在 `if ($(this).parent().hasClass('fancybox')) return;` 下插入 `if ($(this).hasClass('nofancybox')) return;` 意思为如果遇到 nofancybox 类则跳过，这样在不需要 fancybox 显示 img 标签上的 class 改为 nofancybox 就可以禁用 fancybox 了。
 
 ## 后记 ##
 &emsp;&emsp;终于造好了轮子= = 整个人都萌了许多
 &emsp;&emsp;bug 在所难免，本项目 GitHub 主页：
 https://github.com/sykiechen/hexo-theme-hic17
 &emsp;&emsp;（我知道，没人会去看的=。=）
-&emsp;&emsp;但我还是觉得我萌了好多！![](http://www.devchen.com/css/images/avatar.png)
+&emsp;&emsp;但我还是觉得我萌了好多！![](http://www.devchen.com/css/images/tavatar.png)
 
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;by Sykie Chen
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2015.5.23
+<p align = right>
+by Sykie Chen
+2015.5.23
+</p>
