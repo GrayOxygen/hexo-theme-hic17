@@ -2,12 +2,13 @@
   <% if (theme.sidebar === 'bottom'){ %>
     <%- partial('_partial/sidebar') %>
   <% } %>
+  <img src="/css/images/umaru.png" style="position:fixed; right:0; bottom:0; width:70px">
   <div class="outer">
     <div id="footer-info" class="inner" style="text-align:center;">
 	  <table width="100%" border="0">
         <tr>
           <td style="text-align:left; border: 0;">
-            Copyright &copy; 2014-<%= date(new Date(), 'YYYY') %> <%= config.author || config.title %> &emsp;
+            Copyright &copy; 2015-<%= date(new Date(), 'YYYY') %> <%= config.author || config.title %> &emsp;
 			Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a><br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>&emsp;
 	    Hosted on <a href="https://bandwagonhost.com/aff.php?aff=3765" target="_blank">Bandwagon Host</a>&emsp;

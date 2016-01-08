@@ -34,13 +34,15 @@ fb_app_id:
 go_top: true
 # blogroll
 links:
-- name: Yay Ka-Boom-Boom - 郭都豪
+- name: Yay Ka-Boom-Boom
   link: http://www.lynx.im/
+- name: Anotherhome - ペロペロ
+  link: https://www.anotherhome.net/
 - name: 王雨峰同学吃了一块二向箔
   link: http://www.wangyufeng.org/
-- name: 熊神 - xindervella
-  link: http://xindervella.com/
-- name: 南京风行数码 - 绝壁不会坑你
+- name: 有趣独立技术博客导航
+  link: http://iblogs.xyz/
+- name: 南京风行数码
   link: http://www.zol.com/shop_183165/
 - name: Is Fang Binxing Dead?
   link: http://isfangbinxingdead.com
