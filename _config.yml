@@ -17,10 +17,10 @@ widgets:
 - about_me
 - recent_posts
 - category
+- links
 - weibo
 - tagcloud
 - archive
-- links
 
 # Miscellaneous
 favicon: /favicon.ico
@@ -40,12 +40,16 @@ links:
   link: https://www.anotherhome.net/
 - name: 王雨峰同学吃了一块二向箔
   link: http://www.wangyufeng.org/
+- name: RandyPeng's Notes
+  link: http://pengzhendong.cn/
 - name: 有趣独立技术博客导航
   link: http://iblogs.xyz/
 - name: 南京风行数码
   link: http://www.zol.com/shop_183165/
 - name: Is Fang Binxing Dead?
   link: http://isfangbinxingdead.com
+- name: 香蕉
+  link: http://www.bananau.com
 
 # about me
 about_me:
@@ -54,7 +58,7 @@ about_me:
   - <a href="http://www.devchen.com/about/">Sykie Chen</a>
   - or HKEY_C17
   - 码渣 / 前医学生
-  - 微信公众号：十七的空指针
+  - 微信公众号：<a href="http://qr.liantu.com/api.php?text=http://weixin.qq.com/r/NTsEHB7Et0PIrVp-924n">十七的空指针</a>
 
 
 # duoshuo author key
