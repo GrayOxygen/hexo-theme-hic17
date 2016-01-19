@@ -36,20 +36,24 @@ go_top: true
 links:
 - name: Yay Ka-Boom-Boom
   link: http://www.lynx.im/
-- name: Anotherhome - ペロペロ
-  link: https://www.anotherhome.net/
 - name: 王雨峰同学吃了一块二向箔
   link: http://www.wangyufeng.org/
+- name: Anotherhome - ペロペロ
+  link: https://www.anotherhome.net/
 - name: RandyPeng's Notes
   link: http://pengzhendong.cn/
-- name: 有趣独立技术博客导航
-  link: http://iblogs.xyz/
-- name: 南京风行数码
-  link: http://www.zol.com/shop_183165/
-- name: Is Fang Binxing Dead?
-  link: http://isfangbinxingdead.com
 - name: 香蕉
   link: http://www.bananau.com
+- name: 燃冰非冰 - Yogi Ai
+  link: http://navyblue.top/
+- name: 有趣独立技术博客导航
+  link: http://iblogs.xyz/
+- name: 程序员的资料库
+  link: http://codecloud.net/
+- name: Android 代码分享
+  link: http://www.code4apk.com/
+- name: PHP 新手
+  link: http://www.phpxs.com/
 
 # about me
 about_me:
