@@ -17,10 +17,10 @@ widgets:
 - about_me
 - recent_posts
 - category
-- links
 - weibo
-- tagcloud
-- archive
+- links
+# - tagcloud
+# - archive
 
 # Miscellaneous
 favicon: /favicon.ico
@@ -46,14 +46,12 @@ links:
   link: http://www.bananau.com
 - name: 燃冰非冰 - Yogi Ai
   link: http://navyblue.top/
-- name: 有趣独立技术博客导航
-  link: http://iblogs.xyz/
 - name: 程序员的资料库
   link: http://codecloud.net/
-- name: Android 代码分享
+- name: Android 源码下载
   link: http://www.code4apk.com/
-- name: PHP 新手
-  link: http://www.phpxs.com/
+- name: 有趣独立技术博客导航
+  link: http://iblogs.xyz/
 
 # about me
 about_me:
